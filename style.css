@@ -150,24 +150,38 @@ section.bg-light {
     box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
 }
 
-/* Video Bölümü */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
+/* Video Bölümü için Yeni Yer Tutucu Kutusu */
+.video-placeholder-box {
+    max-width: 900px; /* Video genişliğiyle tutarlı */
+    margin: 0 auto; /* Ortala */
+    padding: 60px 40px; /* İç boşluk */
+    text-align: center;
+    background-color: var(--secondary-color); /* Açık mavi arka plan (bg-light) */
     border-radius: 12px;
+    border: 2px dashed var(--primary-color); /* Ana renkte kesik çizgi */
+    opacity: 0.8; /* Biraz soluk, placeholder olduğunu belli etsin */
     box-shadow: var(--card-shadow);
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.video-placeholder-box i {
+    font-size: 4rem; /* Büyük ikon */
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
+
+.video-placeholder-box h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.video-placeholder-box p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
 
 /* Footer */
 .footer {
