@@ -4,9 +4,7 @@
 
 This repository contains the official project website for **PriceLink**, a senior project aimed at modernizing retail price management using Electronic Shelf Labels (ESL).
 
-### ✨ [View Live Demo]([YOUR-GITHUB-PAGES-LINK-HERE])
 
-> **Not:** Lütfen `[YOUR-GITHUB-PAGES-LINK-HERE]` yazan yeri kendi sitenin `https://kullaniciadin.github.io/reponuz/` linki ile değiştirin.
 
 ---
 
