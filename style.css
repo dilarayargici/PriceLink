@@ -1,29 +1,60 @@
+/* * PriceLink - Professional Stylesheet 
+ * Optimized for Documentation, Poster and Academic Sections
+ */
+
 :root {
     --primary: #007aff;
-    --primary-light: rgba(0, 122, 255, 0.1);
+    --primary-hover: #0056b3;
+    --primary-light: rgba(0, 122, 255, 0.08);
     --text-dark: #1d1d1f;
+    --text-muted: #86868b;
     --border-gray: #e5e5e7;
+    --bg-light: #f5f5f7;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: var(--text-dark);
     background-color: #ffffff;
-    padding-top: 70px;
+    padding-top: 70px; /* Navbar için boşluk */
+    line-height: 1.6;
     scroll-behavior: smooth;
 }
 
 .fw-800 { font-weight: 800; }
 .fw-700 { font-weight: 700; }
 .ls-1 { letter-spacing: 1.5px; }
-.x-small { font-size: 0.75rem; letter-spacing: 1px; }
 
-header { 
-    padding: 100px 0 60px; 
-    background: radial-gradient(circle at top right, #f8fbff, #fff); 
+/* --- Navbar --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
 }
 
-.section-title { font-weight: 800; letter-spacing: -1px; }
+.navbar-brand { font-weight: 800; letter-spacing: -0.5px; }
+
+/* --- Hero Section --- */
+header#home {
+    padding: 100px 0 60px;
+    background: radial-gradient(circle at top right, #f8fbff 0%, #ffffff 70%);
+}
+
+.project-summary-box {
+    border: 1px solid var(--border-gray);
+    transition: transform 0.3s ease;
+}
+
+/* --- Documentation Section --- */
+section#reports {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
 
 /* Rapor Kartları */
 .report-card {
@@ -32,9 +63,116 @@ header {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
+    height: 100%;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.report-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.08) !important;
+}
+
+/* Final Raporu Özel Vurgu */
+.border-primary-thick {
+    border: 2px solid var(--primary) !important;
+    background: linear-gradient(180deg, #ffffff 0%, var(--primary-light) 100%);
+}
+
+.btn-view {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-view:hover {
+    background: var(--primary-hover);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+/* --- Poster Bölümü --- */
+.poster-tablet-view {
+    max-width: 1000px;
+    background: #222;
+    border: 12px solid #222;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+/* --- Team & Tags --- */
+.team-tag {
+    background: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    transition: 0.3s;
+}
+
+.team-tag:hover {
+    border-color: var(--primary) !important;
+    color: var(--primary);
+}
+
+/* --- Akademik Blok (Güzelleştirilmiş Bölüm) --- */
+.academic-container {
+    max-width: 1000px;
+    margin-top: 3rem;
+}
+
+.academic-card {
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    background: #fff;
+}
+
+.academic-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px; /* Bölüm yüksekliği artırıldı */
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Orta kısımdaki diploma/kep ikonu */
+.academic-divider {
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.academic-card:hover .academic-divider {
+    transform: scale(1.1);
+}
+
+/* --- Responsive Ayarlar --- */
+@media (max-width: 768px) {
+    header#home { padding: 60px 0 40px; }
+    .academic-section { min-height: auto; padding: 2rem !important; }
+    .academic-card .row .border-start, .academic-card .row .border-end {
+        border: none !important;
+    }
+    .col-md-2 { display: none; } /* Mobilde ortadaki ikon gizlenir */
+}
+
+footer {
+    background-color: #ffffff;
+}
 .report-card:hover {
     transform: translateY(-8px);
     border-color: var(--primary);
