@@ -1,68 +1,69 @@
 :root {
-    --primary-color: #007aff;
-    --text-dark: #1d1d1f;
-    --bg-light: #f5f5f7;
-    --white: #ffffff;
+    --primary: #007aff;
+    --text-main: #1d1d1f;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-dark);
-    background-color: var(--white);
-    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-main);
+    background-color: #ffffff;
+    padding-top: 70px;
 }
 
-.navbar {
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(20px);
-}
+.fw-800 { font-weight: 800; }
+.letter-spacing { letter-spacing: 2px; }
+.x-small { font-size: 0.7rem; }
 
-.navbar-brand { font-weight: 800; color: var(--primary-color) !important; }
+header { padding: 80px 0; background: linear-gradient(180deg, #f8fbff 0%, #fff 100%); }
 
-section { padding: 100px 0; }
+.project-summary-box { border: 1px solid #eee; margin-top: -20px; }
 
-#home { padding: 160px 0 100px; background: linear-gradient(to bottom, #f8fbff, #fff); }
+section { padding: 80px 0; }
 
-#home h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; }
+.section-title { font-weight: 800; letter-spacing: -1px; }
 
-/* Kart Tasarımları */
-#reports .card {
-    border: none;
-    border-radius: 20px;
+/* Report Cards */
+.report-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    height: 100%;
     transition: all 0.3s ease;
 }
 
-#reports .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+.report-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
 
-.highlight-card {
-    border: 2px solid var(--primary-color) !important;
-    background: linear-gradient(180deg, #fff 0%, #f0f7ff 100%) !important;
+.btn-view {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 8px;
+    letter-spacing: 1px;
 }
 
-.btn { border-radius: 12px; font-weight: 600; padding: 0.6rem 1.2rem; }
+.btn-view:hover { color: #fff; opacity: 0.9; }
 
-/* Team & Academic Section */
-.team-card {
-    border: 1px solid rgba(0,0,0,0.05) !important;
-    background: #fff;
+/* Poster Tablet */
+.poster-tablet-view {
+    max-width: 900px;
+    border-radius: 20px;
+    border: 10px solid #222;
+    background: #222;
+    overflow: hidden;
 }
 
-.academic-info {
-    border-top: 1px solid #eee;
-    padding-top: 3rem;
-}
+.tablet-bar { height: 30px; background: #222; padding-top: 10px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
 
-.fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+/* Team & Academic */
+.team-tag { background: #f8f9fa; font-size: 0.85rem; font-weight: 600; }
+.academic-block { max-width: 800px; margin: 0 auto; }
