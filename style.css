@@ -204,3 +204,26 @@ section.bg-light {
     opacity: 1;
     transform: translateY(0);
 }
+/* Poster Bölümü Özel Stilleri */
+.poster-frame {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.poster-frame:hover {
+    transform: scale(1.01);
+}
+
+.poster-frame img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+/* Teknik Özellikler Kutusu (Hero) */
+#home .project-description {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 122, 255, 0.1);
+}
