@@ -4,359 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PriceLink | Sustainable IoT Ecosystem</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="80">
 
-    <nav id="navbar-main" class="navbar navbar-expand-lg fixed-top">
+    <nav id="navbar-main" class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                <i class="bi bi-link-45deg"></i> PriceLink
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav nav-pills ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reports">Documentation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#video">Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                </ul>
+            <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-link-45deg text-primary"></i> PRICELINK</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#home">HOME</a>
+                <a class="nav-link" href="#reports">DOCUMENTATION</a>
+                <a class="nav-link" href="#poster">POSTER</a>
+                <a class="nav-link" href="#team">TEAM</a>
             </div>
         </div>
     </nav>
 
-    <section id="home">
-        <div class="container text-center">
-            <h1 class="fade-in">PriceLink</h1>
-            <p class="lead fade-in">Sustainable IoT Ecosystem for Smart Apparel Pricing.</p>
+    <header id="home" class="text-center">
+        <div class="container">
+            <h1 class="display-4 fw-800 mb-3">PriceLink</h1>
+            <p class="lead text-muted mb-5">Sustainable IoT Ecosystem for Smart Apparel Pricing.</p>
             
-            <div class="project-description fade-in mt-5">
-                <div class="row text-start g-4">
+            <div class="project-summary-box p-4 shadow-sm rounded-4 bg-white">
+                <div class="row g-4 text-start">
                     <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-tree"></i> Environmental</h6>
-                        <p class="small">Zero paper waste through reusable E-Ink technology.</p>
+                        <h6 class="text-primary fw-bold"><i class="bi bi-tree me-2"></i>Environmental</h6>
+                        <p class="small mb-0">Zero paper waste through reusable E-Ink technology.</p>
                     </div>
                     <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-graph-up-arrow"></i> Economic</h6>
-                        <p class="small">Reduces labor overhead by 85% for pricing updates.</p>
+                        <h6 class="text-primary fw-bold"><i class="bi bi-graph-up-arrow me-2"></i>Economic</h6>
+                        <p class="small mb-0">Reduces labor overhead by 85% for pricing updates.</p>
                     </div>
                     <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-cpu"></i> Tech Stack</h6>
-                        <p class="small">ESP32 SoC, MQTT, Node.js, and React.js.</p>
+                        <h6 class="text-primary fw-bold"><i class="bi bi-cpu me-2"></i>Tech Stack</h6>
+                        <p class="small mb-0">ESP32 SoC, MQTT, Node.js, and React.js.</p>
                     </div>
                     <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-lightning"></i> Performance</h6>
-                        <p class="small">Sub-5 second end-to-end synchronization.</p>
+                        <h6 class="text-primary fw-bold"><i class="bi bi-lightning me-2"></i>Performance</h6>
+                        <p class="small mb-0">Sub-5 second end-to-end synchronization.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="reports" class="bg-light py-5">
-        <div class="container">
-            <h2 class="section-title fade-in text-center mb-5">Technical Documentation</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-image" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Project Poster</h5>
-                        <p class="small text-muted">Visual summary of system architecture and KPIs.</p>
-                        <a href="PRICELINK.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View Poster</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-file-earmark-text" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Analysis Report</h5>
-                        <p class="small text-muted">Requirements engineering and system modeling.</p>
-                        <a href="AnalysisReport.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View PDF</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-diagram-3" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">High-Level Design</h5>
-                        <p class="small text-muted">Architecture and hardware/software mapping.</p>
-                        <a href="HighLevelDesignReport.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View PDF</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-gear-wide-connected" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Low-Level Design</h5>
-                        <p class="small text-muted">Granular logic and database schemas.</p>
-                        <a href="LLD_Report_v2.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View PDF</a>
-                    </div>
-                </div>
-               <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-lightbulb" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Project Proposal</h5>
-                        <p class="small text-muted">Initial vision, problem statement, and objectives.</p>
-                        <a href="ProjectProposal.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View PDF</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-list-check" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Specifications</h5>
-                        <p class="small text-muted">Detailed technical requirements and constraints.</p>
-                        <a href="ProjectSpecificationsReport.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View PDF</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                        <div class="mb-3 text-primary"><i class="bi bi-check2-circle" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Test Plan</h5>
-                        <p class="small text-muted">Quality assurance and validation protocols.</p>
-                        <a href="TestPlanReport_PriceLink.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View PDF</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 h-100 shadow-sm border-primary fade-in" style="border: 1px solid !important;">
-                        <div class="mb-3 text-primary"><i class="bi bi-trophy" style="font-size: 2rem;"></i></div>
-                        <h5 class="fw-bold">Final Project Report</h5>
-                        <p class="small text-muted">Project conclusion and final validation results.</p>
-                        <a href="FinalReport.pdf" class="btn btn-primary mt-auto" target="_blank">Open Full Report</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="video">
-        <div class="container">
-            <h2 class="section-title fade-in">System Demo</h2>
-            <div class="video-placeholder-box fade-in">
-                <i class="bi bi-play-circle-fill"></i>
-                <h3>Operational Continuity Proven</h3>
-                <p>Real-time updates and synchronization demonstration.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="bg-light">
-        <div class="container text-center">
-            <h2 class="section-title fade-in">Project Team</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-3"><div class="card p-3 shadow-sm border-0"><strong>Dilara Yargıcı</strong></div></div>
-                <div class="col-md-3"><div class="card p-3 shadow-sm border-0"><strong>Aslı Dölek</strong></div></div>
-                <div class="col-md-3"><div class="card p-3 shadow-sm border-0"><strong>Berna Tanrıverdi</strong></div></div>
-                <div class="col-md-3"><div class="card p-3 shadow-sm border-0"><strong>Yaşar Mert Dirican</strong></div></div>
-            </div>
-            <div class="mt-5 text-muted">
-                <p>Supervisor: <strong>Prof. Dr. Gökçe Nur Yılmaz</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-4 text-center">
-        <p class="text-muted small mb-0">&copy; 2026 PriceLink Project Team</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
-    <section id="home">
-        <div class="container text-center">
-            <h1 class="fade-in">PriceLink</h1>
-            <p class="lead fade-in">
-                A Sustainable IoT Ecosystem for Smart Apparel Pricing. Addressing the technology-market gap in retail.
-            </p>
-            <div class="project-description fade-in">
-                <div class="row text-start g-4">
-                    <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-tree"></i> Environmental</h6>
-                        <p class="small">Zero paper waste through reusable E-Ink technology.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-graph-up-arrow"></i> Economic</h6>
-                        <p class="small">Reduces labor overhead by 85% for pricing updates.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-cpu"></i> Tech Stack</h6>
-                        <p class="small">ESP32 SoC, MQTT, Node.js, and React.js.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-primary fw-bold"><i class="bi bi-lightning"></i> Performance</h6>
-                        <p class="small">Sub-5 second end-to-end synchronization.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </header>
 
     <section id="reports" class="bg-light">
         <div class="container">
-            <h2 class="section-title fade-in">Technical Documentation</h2>
+            <h2 class="section-title text-center mb-5">Technical Documentation</h2>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card p-3 fade-in h-100">
-                        <h5 class="fw-bold">Analysis</h5>
-                        <p class="small text-muted">Functional & non-functional system requirements.</p>
-                        <a href="AnalysisReport.pdf" class="btn btn-sm btn-outline-primary mt-auto" target="_blank">View PDF</a>
+                <div class="col-md-4">
+                    <div class="report-card p-4 h-100 shadow-sm">
+                        <h6 class="fw-bold text-primary mb-2">Project Proposal</h6>
+                        <p class="small text-muted">Initial vision and problem statement.</p>
+                        <a href="ProjectProposal.pdf" class="btn btn-view mt-auto w-100" target="_blank">VIEW PDF</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card p-3 fade-in h-100" style="transition-delay: 100ms;">
-                        <h5 class="fw-bold">HLD</h5>
-                        <p class="small text-muted">3-tier cloud-native IoT architecture.</p>
-                        <a href="HighLevelDesignReport.pdf" class="btn btn-sm btn-outline-primary mt-auto" target="_blank">View PDF</a>
+                <div class="col-md-4">
+                    <div class="report-card p-4 h-100 shadow-sm">
+                        <h6 class="fw-bold text-primary mb-2">Specifications</h6>
+                        <p class="small text-muted">Technical requirements and constraints.</p>
+                        <a href="ProjectSpecificationsReport.pdf" class="btn btn-view mt-auto w-100" target="_blank">VIEW PDF</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card p-3 fade-in h-100" style="transition-delay: 200ms;">
-                        <h5 class="fw-bold">LLD</h5>
-                        <p class="small text-muted">Granular internal logic and MQTT protocols.</p>
-                        <a href="LLD_Report_v2.pdf" class="btn btn-sm btn-outline-primary mt-auto" target="_blank">View PDF</a>
+                <div class="col-md-4">
+                    <div class="report-card p-4 h-100 shadow-sm">
+                        <h6 class="fw-bold text-primary mb-2">Analysis Report</h6>
+                        <p class="small text-muted">System models and use cases.</p>
+                        <a href="AnalysisReport.pdf" class="btn btn-view mt-auto w-100" target="_blank">VIEW PDF</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card p-3 fade-in h-100 border-primary shadow-sm" style="transition-delay: 300ms;">
-                        <h5 class="fw-bold text-primary">Final Report</h5>
-                        <p class="small text-muted">Validation results and project conclusion.</p>
-                        <a href="FinalReport.pdf" class="btn btn-sm btn-primary mt-auto" target="_blank">Full Report</a>
+                <div class="col-md-4">
+                    <div class="report-card p-4 h-100 shadow-sm">
+                        <h6 class="fw-bold text-primary mb-2">High Level Design</h6>
+                        <p class="small text-muted">3-tier IoT architecture mapping.</p>
+                        <a href="HighLevelDesignReport.pdf" class="btn btn-view mt-auto w-100" target="_blank">VIEW PDF</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="report-card p-4 h-100 shadow-sm">
+                        <h6 class="fw-bold text-primary mb-2">Low Level Design</h6>
+                        <p class="small text-muted">Granular logic and MQTT protocols.</p>
+                        <a href="LLD_Report_v2.pdf" class="btn btn-view mt-auto w-100" target="_blank">VIEW PDF</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="report-card p-4 h-100 shadow-sm">
+                        <h6 class="fw-bold text-primary mb-2">Test Plan</h6>
+                        <p class="small text-muted">Quality assurance and protocols.</p>
+                        <a href="TestPlanReport_PriceLink.pdf" class="btn btn-view mt-auto w-100" target="_blank">VIEW PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-8">
+                    <div class="report-card p-4 border-primary shadow text-center" style="border: 2px solid #007aff !important;">
+                        <h5 class="fw-bold text-primary">Final Project Report</h5>
+                        <p class="text-muted">Complete validation and conclusion of PriceLink.</p>
+                        <a href="FinalReport.pdf" class="btn btn-primary px-5 py-2" target="_blank">Read Full Final Report</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="poster">
+    <section id="poster" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-5">Project Poster</h2>
+            <div class="poster-tablet-view shadow-lg mx-auto">
+                <div class="tablet-bar d-flex gap-1 px-3">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                </div>
+                <embed src="PRICELINK.pdf" type="application/pdf" width="100%" height="600px" />
+            </div>
+            <a href="PRICELINK.pdf" class="btn btn-outline-dark mt-4" target="_blank"><i class="bi bi-download me-2"></i>Download Poster</a>
+        </div>
+    </section>
+
+    <footer id="team" class="py-5 border-top bg-white text-center">
         <div class="container">
-            <h2 class="section-title fade-in">Project Poster</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center fade-in">
-                    <div class="poster-frame shadow-lg p-2 bg-white rounded">
-                        <img src="poster_preview.jpg" class="img-fluid rounded" alt="PriceLink Project Poster">
-                        <div class="mt-4">
-                            <a href="PRICELINK.pdf" class="btn btn-primary px-4 py-2" target="_blank">
-                                <i class="bi bi-file-earmark-pdf"></i> Download High-Res Poster (PDF)
-                            </a>
-                        </div>
+            <h2 class="section-title mb-5">Project Team</h2>
+            <div class="row g-3 justify-content-center mb-5">
+                <div class="col-6 col-md-2"><div class="team-tag p-2 border rounded-3">Dilara Yargıcı</div></div>
+                <div class="col-6 col-md-2"><div class="team-tag p-2 border rounded-3">Aslı Dölek</div></div>
+                <div class="col-6 col-md-2"><div class="team-tag p-2 border rounded-3">Berna Tanrıverdi</div></div>
+                <div class="col-6 col-md-2"><div class="team-tag p-2 border rounded-3">Yaşar Mert Dirican</div></div>
+            </div>
+
+            <div class="academic-block py-4 rounded-4 bg-light shadow-sm">
+                <div class="row">
+                    <div class="col-md-6 border-end">
+                        <span class="text-uppercase x-small fw-bold text-muted letter-spacing d-block mb-2">Supervisor</span>
+                        <p class="h6 mb-0">Prof. Dr. Gökçe Nur Yılmaz 👩‍🏫</p>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="text-uppercase x-small fw-bold text-muted letter-spacing d-block mb-2">Jury Members</span>
+                        <p class="h6 mb-0">Dr. Elif Kurtaran Özbudak 👩‍💼 | Dr. Mehmet Evren Coşkun 👨‍💼</p>
                     </div>
                 </div>
             </div>
+            <p class="mt-5 text-muted x-small">&copy; 2026 PriceLink Project Team. TED University CMPE 492.</p>
         </div>
-    </section>
-
-    <section id="video" class="bg-light">
-        <div class="container">
-            <h2 class="section-title fade-in">System Demo</h2>
-            <div class="video-placeholder-box fade-in">
-                <i class="bi bi-play-circle-fill"></i>
-                <h3>Operational Continuity Proven</h3>
-                <p>Operational continuity observed across all layers, proving IoT ecosystem viability.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="team">
-        <div class="container">
-            <h2 class="section-title fade-in">Project Team</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-3"><div class="card text-center p-3"><strong>Dilara Yargıcı</strong></div></div>
-                <div class="col-md-3"><div class="card text-center p-3"><strong>Aslı Dölek</strong></div></div>
-                <div class="col-md-3"><div class="card text-center p-3"><strong>Berna Tanrıverdi</strong></div></div>
-                <div class="col-md-3"><div class="card text-center p-3"><strong>Yaşar Mert Dirican</strong></div></div>
-            </div>
-            <div class="text-center mt-5">
-                <p class="mb-0 text-muted">Supervisor: <strong>Prof. Dr. Gökçe Nur Yılmaz</strong></p>
-                <p class="text-muted small">TED University - CMPE 492</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-                        <h6 class="text-uppercase text-muted small fw-bold mb-3">Jury Members</h6>
-                        <div class="d-flex justify-content-center gap-4">
-                            <p class="text-dark">Dr. Elif Kurtaran Özbudak</p>
-                            <p class="text-dark">Dr. Mehmet Evren Coşkun</p>
-                        </div>
-                    </div>
-                </div>
-    </section>
-
-    <footer class="footer text-center">
-        <p class="mb-0">&copy; 2026 PriceLink Project Team. All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <section id="poster" class="py-5">
-    <div class="container">
-        <h2 class="section-title fade-in text-center mb-5">Project Poster</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-10 text-center fade-in">
-                <div class="poster-container shadow-lg rounded overflow-hidden mb-4" style="height: 800px; border: 1px solid #dee2e6;">
-                    <embed src="PRICELINK.pdf" type="application/pdf" width="100%" height="100%" />
-                </div>
-                
-                <div class="mt-4">
-                    <p class="text-muted small">Posteri görüntüleyemiyorsanız lütfen indirin:</p>
-                    <a href="PRICELINK.pdf" class="btn btn-primary px-5 py-3 shadow" target="_blank">
-                        <i class="bi bi-file-earmark-pdf-fill me-2"></i> Download Full Resolution Poster (PDF)
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="reports" class="bg-light py-5">
-    <div class="container">
-        <h2 class="section-title fade-in text-center mb-5">Technical Documentation</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                    <h5 class="fw-bold text-primary">Analysis Report</h5>
-                    <p class="small text-muted">System models, use cases, and requirements.</p>
-                    <a href="AnalysisReport.pdf" class="btn btn-outline-primary mt-auto" target="_blank">Open PDF</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                    <h5 class="fw-bold text-primary">High Level Design</h5>
-                    <p class="small text-muted">Architecture and hardware/software mapping.</p>
-                    <a href="HighLevelDesignReport.pdf" class="btn btn-outline-primary mt-auto" target="_blank">Open PDF</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                    <h5 class="fw-bold text-primary">Project Specifications</h5>
-                    <p class="small text-muted">Core motivations and project scope.</p>
-                    <a href="ProjectSpecificationsReport.pdf" class="btn btn-outline-primary mt-auto" target="_blank">Open PDF</a>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4">
-                <div class="card p-4 h-100 shadow-sm border-primary fade-in">
-                    <h5 class="fw-bold text-primary">Final Project Report</h5>
-                    <p class="small text-muted">Complete validation and conclusion of PriceLink.</p>
-                    <a href="FinalReport.pdf" class="btn btn-primary mt-auto" target="_blank">Read Final Report</a>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4">
-                <div class="card p-4 h-100 shadow-sm border-0 fade-in">
-                    <h5 class="fw-bold text-primary">Test Plan</h5>
-                    <p class="small text-muted">Quality assurance and testing protocols.</p>
-                    <a href="TestPlanReport_PriceLink.pdf" class="btn btn-outline-primary mt-auto" target="_blank">View Test Plan</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 </body>
 </html>
