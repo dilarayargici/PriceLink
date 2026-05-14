@@ -1,229 +1,177 @@
-/* CSS Değişkenleri ve Temel Kurulum */
-:root {
-    --primary-color: #007aff; /* Modern bir mavi */
-    --secondary-color: #f0f4ff; /* Çok açık mavi arka plan */
-    --dark-color: #2c3e50;
-    --text-color: #34495e;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-}
+/* PriceLink - Professional Project Stylesheet */
 
-html {
-    scroll-behavior: smooth;
+:root {
+    --primary-color: #007aff; /* Modern Apple Blue */
+    --primary-dark: #0056b3;
+    --text-dark: #1d1d1f;
+    --text-muted: #86868b;
+    --bg-light: #f5f5f7;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--text-color);
-    background-color: #ffffff;
-    /* Scrollspy'ın doğru çalışması için */
-    position: relative; 
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--white);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: var(--dark-color);
-}
-
-.section-title {
-    font-weight: 800;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-section {
-    padding: 80px 0;
-}
-
-section.bg-light {
-    background-color: var(--secondary-color) !important;
-}
-
-/* Navigasyon Barı */
+/* Navbar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1rem 0;
+    transition: var(--transition);
 }
 
 .navbar-brand {
     font-weight: 800;
-    color: var(--primary-color);
-}
-
-.navbar-brand:hover {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
+    letter-spacing: -0.5px;
 }
 
 .nav-link {
+    color: var(--text-dark) !important;
     font-weight: 500;
-    color: var(--dark-color);
+    font-size: 0.95rem;
+    margin-left: 1rem;
 }
 
-.nav-link.active,
-.nav-link:hover {
-    color: var(--primary-color);
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
 }
 
-/* Ana Giriş (Hero) Bölümü */
+/* Sections */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    letter-spacing: -1px;
+}
+
+/* Hero Section (Home) */
 #home {
-    padding: 100px 0 60px 0;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+    background: radial-gradient(circle at top right, #f0f7ff 0%, #ffffff 50%);
+    padding: 160px 0 100px;
 }
 
 #home h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
-    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #000 0%, #444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#home .lead {
-    font-size: 1.3rem;
-    font-weight: 400;
-    max-width: 700px;
-    margin: 20px auto 30px auto;
+.project-description {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    margin-top: 4rem;
 }
 
-#home .project-description {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
-}
-
-/* Kartlar */
-.card {
+/* Documentation Cards - Grid Layout Fix */
+#reports .card {
     border: none;
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    height: 100%; /* Kartların aynı yükseklikte olmasını sağlar */
+    border-radius: 18px;
+    background: var(--white);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Tüm kartları eşit boy yapar */
 }
 
-.card:hover {
+#reports .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08) !important;
 }
 
-.card-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+/* Özel Vurgulu Kart (Final Report) */
+.border-primary {
+    border: 1.5px solid var(--primary-color) !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%) !important;
 }
 
-.card-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+/* Card Icons */
+.bi {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
-/* Takım kartları için başlık (isimler) */
-.card .card-title-team {
-     font-size: 1.25rem; /* İsimler için biraz daha küçük font */
-     font-weight: 700;
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition);
 }
-
-/* Takım üyelerinin altındaki "Computer Engineering Student" metni için stil */
-.card .text-muted.mb-2 {
-    font-size: 0.95rem; /* Biraz daha küçük ve belirgin */
-    font-weight: 500;
-    color: #6c757d !important; /* Bootstrap'in text-muted rengi */
-}
-
 
 .btn-primary {
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    font-weight: 500;
-    padding: 10px 25px;
-    border-radius: 8px;
-    transition: all 0.3s;
+    border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+    background-color: var(--primary-dark);
+    transform: scale(1.02);
 }
 
-/* Video Bölümü için Yeni Yer Tutucu Kutusu */
+.btn-outline-primary {
+    border-width: 1.5px;
+}
+
+/* Demo Video Placeholder */
 .video-placeholder-box {
-    max-width: 900px; /* Video genişliğiyle tutarlı */
-    margin: 0 auto; /* Ortala */
-    padding: 60px 40px; /* İç boşluk */
+    background: #000;
+    color: #fff;
+    border-radius: 24px;
+    padding: 80px 20px;
     text-align: center;
-    background-color: var(--secondary-color); /* Açık mavi arka plan (bg-light) */
-    border-radius: 12px;
-    border: 2px dashed var(--primary-color); /* Ana renkte kesik çizgi */
-    opacity: 0.8; /* Biraz soluk, placeholder olduğunu belli etsin */
-    box-shadow: var(--card-shadow);
+    position: relative;
+    overflow: hidden;
 }
 
 .video-placeholder-box i {
-    font-size: 4rem; /* Büyük ikon */
+    font-size: 4rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
-.video-placeholder-box h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--dark-color);
-    margin-bottom: 10px;
+/* Team Section */
+#team .card {
+    border: 1px solid rgba(0,0,0,0.05);
+    background: var(--bg-light);
+    border-radius: 12px;
 }
 
-.video-placeholder-box p {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    margin-bottom: 0;
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Footer */
-.footer {
-    background-color: var(--dark-color);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 40px 0;
-}
-.footer p {
-    margin: 0;
+footer {
+    background: var(--bg-light);
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
-/* JS için Animasyon Sınıfları */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Poster Bölümü Özel Stilleri */
-.poster-frame {
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    transition: transform 0.3s ease;
-}
-
-.poster-frame:hover {
-    transform: scale(1.01);
-}
-
-.poster-frame img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #eee;
-}
-
-/* Teknik Özellikler Kutusu (Hero) */
-#home .project-description {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(0, 122, 255, 0.1);
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #home h1 { font-size: 2.5rem; }
+    section { padding: 60px 0; }
+    .project-description { padding: 1.5rem; }
 }
