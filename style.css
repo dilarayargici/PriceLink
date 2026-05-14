@@ -1,23 +1,15 @@
-/* * PriceLink - Professional Stylesheet 
- * Optimized for Documentation, Poster and Academic Sections
- */
-
 :root {
     --primary: #007aff;
-    --primary-hover: #0056b3;
-    --primary-light: rgba(0, 122, 255, 0.08);
     --text-dark: #1d1d1f;
-    --text-muted: #86868b;
     --border-gray: #e5e5e7;
-    --bg-light: #f5f5f7;
+    --primary-light: rgba(0, 122, 255, 0.08);
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text-dark);
     background-color: #ffffff;
-    padding-top: 70px; /* Navbar için boşluk */
-    line-height: 1.6;
+    padding-top: 70px;
     scroll-behavior: smooth;
 }
 
@@ -25,16 +17,70 @@ body {
 .fw-700 { font-weight: 700; }
 .ls-1 { letter-spacing: 1.5px; }
 
-/* --- Navbar --- */
-.navbar {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(20px);
-    transition: all 0.3s ease;
+header { padding: 80px 0; background: radial-gradient(circle at top right, #f8fbff, #fff); }
+
+.project-summary-box { border: 1px solid var(--border-gray); }
+
+section { padding: 80px 0; }
+
+.section-title { font-weight: 800; letter-spacing: -1px; }
+
+/* Rapor Kartları */
+.report-card {
+    background: #fff;
+    border: 1px solid var(--border-gray);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.navbar-brand { font-weight: 800; letter-spacing: -0.5px; }
+.report-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.08) !important;
+}
 
-/* --- Hero Section --- */
+.border-primary-thick {
+    border: 2px solid var(--primary) !important;
+    background: linear-gradient(180deg, #ffffff 0%, var(--primary-light) 100%) !important;
+}
+
+.btn-view {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+}
+
+.btn-view:hover { opacity: 0.9; color: #fff; }
+
+/* Akademik Blok */
+.academic-container { max-width: 1000px; }
+
+.academic-section {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-tag {
+    background: #fff;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.team-tag:hover { color: var(--primary); border-color: var(--primary) !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .academic-section { min-height: auto; padding: 2rem !important; }
+    .col-md-2 { display: none; }
+}/* --- Hero Section --- */
 header#home {
     padding: 100px 0 60px;
     background: radial-gradient(circle at top right, #f8fbff 0%, #ffffff 70%);
