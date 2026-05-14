@@ -1,40 +1,135 @@
 :root {
     --primary: #007aff;
-    --text-main: #1d1d1f;
+    --primary-light: rgba(0, 122, 255, 0.1);
+    --text-dark: #1d1d1f;
+    --border-gray: #e5e5e7;
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--text-main);
+    color: var(--text-dark);
     background-color: #ffffff;
     padding-top: 70px;
+    scroll-behavior: smooth;
 }
 
 .fw-800 { font-weight: 800; }
-.letter-spacing { letter-spacing: 2px; }
-.x-small { font-size: 0.7rem; }
+.fw-700 { font-weight: 700; }
+.ls-1 { letter-spacing: 1.5px; }
+.x-small { font-size: 0.75rem; letter-spacing: 1px; }
 
-header { padding: 80px 0; background: linear-gradient(180deg, #f8fbff 0%, #fff 100%); }
-
-.project-summary-box { border: 1px solid #eee; margin-top: -20px; }
-
-section { padding: 80px 0; }
+header { 
+    padding: 100px 0 60px; 
+    background: radial-gradient(circle at top right, #f8fbff, #fff); 
+}
 
 .section-title { font-weight: 800; letter-spacing: -1px; }
 
-/* Report Cards */
+/* Rapor Kartları */
 .report-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid var(--border-gray);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .report-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.08) !important;
+}
+
+.border-primary-thick {
+    border: 2px solid var(--primary) !important;
+    background: linear-gradient(to bottom, #ffffff, #f0f7ff);
+}
+
+.btn-view {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+}
+
+.btn-view:hover {
+    background: #0056b3;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+/* Ekip Etiketleri */
+.team-tag {
+    background: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    transition: 0.3s;
+    cursor: default;
+}
+
+.team-tag:hover {
+    border-color: var(--primary) !important;
+    color: var(--primary);
+}
+
+/* Akademik Blok Tasarımı */
+.academic-container {
+    max-width: 1000px;
+}
+
+.academic-card {
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.academic-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px; /* Daha dolgun görünmesi için artırıldı */
+}
+
+.icon-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academic-divider {
+    width: 65px;
+    height: 65px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #fff;
+    z-index: 2;
+}
+
+/* Mobil Düzenlemeler */
+@media (min-width: 768px) {
+    .border-start-md {
+        border-left: 1px solid #eee !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .academic-section {
+        min-height: auto;
+        padding: 40px 20px !important;
+    }
+    .academic-section:first-child {
+        border-bottom: 1px solid #eee;
+    }
+}    border-color: var(--primary);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
 
